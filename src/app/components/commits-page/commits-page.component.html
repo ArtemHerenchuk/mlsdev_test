@@ -1,0 +1,15 @@
+<app-header></app-header>
+<section class="repo-page commit-page">
+  <div class="wrap">
+    <div class="repo-page__card">
+      <p>Cписок коммитов:</p>
+      <ul *ngIf="commits && commits.length">
+        <li *ngFor="let commit of commits">
+          <a href="{{commit.html_url}}" target="_blank">{{commit.sha}}</a>
+        </li>
+      </ul>
+      <img src="/assets/images/github-512.png" />
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,28 @@
+@import "../../../../assets/styles/variables";
+
+.header {
+  &__img-wrap {
+    background-color: rgb(36,41,46);
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    cursor: pointer;
+    outline: none;
+    margin: 5px auto;
+    width: 30%;
+    height: 100%;
+  }
+
+  &__menu {
+    background-color: rgba(36,41,46, 0.7);
+  }
+
+  &__go-back {
+    padding: 10px 0;
+    display: block;
+    @include text-mixin(#fff, 1.2vw, $font-gotham-pro-regular);
+    margin: 0 5%;
+    cursor: pointer;
+  }
+}

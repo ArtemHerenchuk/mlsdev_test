@@ -1,0 +1,11 @@
+@import "../../../../assets/styles/variables";
+
+.footer {
+  height: 40px;
+  background-color: #24292e;
+  text-align: center;
+  p {
+    line-height: 40px;
+    @include text-mixin(#fff, 1.4vw, $font-gotham-pro-regular);
+  }
+}
