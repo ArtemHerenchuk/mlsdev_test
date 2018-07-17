@@ -1,0 +1,59 @@
+@import "../../../assets/styles/variables";
+
+.repo-page {
+  &__card {
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+
+    & > img {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 5vw;
+      height: 5vw;
+    }
+
+    h3 {
+      @include text-mixin(#000, 2vw, $font-gotham-pro-regular);
+      margin: 0 0 15px 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding-bottom: 10px;
+      li {
+        padding-bottom: 5px;
+        position: relative;
+        a {
+          padding: 0;
+          font-size: 1.2vw;
+        }
+        &:before {
+          content: '';
+          background-image: url('/assets/images/fork.png');
+          margin-right: 5px;
+          width: 1.2vw;
+          left: -20px;
+          height: 1.2vw;
+          position: absolute;
+          bottom: 5px;
+          display: inline-block;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    p, a {
+      @include text-mixin(#000, 1.6vw, $font-gotham-pro-regular);
+      padding-bottom: 10px;
+      margin: 0;
+    }
+
+  }
+}

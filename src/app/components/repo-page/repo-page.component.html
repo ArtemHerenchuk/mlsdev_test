@@ -1,3 +1,16 @@
-<p>
-  repo-page works!
-</p>
+<section class="repo-page">
+  <div class="wrap">
+    <div class="repo-page__card">
+      <h3>Репозиторий: {{repository.repository.name}}</h3>
+      <p>Автор: {{repository.repository.owner}}</p>
+      <p>Ветки:</p>
+      <ul *ngIf="repository.forks && repository.forks.length">
+        <li *ngFor="let fork of repository.forks">
+          <a href="{{fork.link}}" target="_blank">{{fork.name}}</a>
+        </li>
+      </ul>
+      <a [routerLink]="'commits'">Посмотреть коммиты</a>
+      <img src="/assets/images/github-512.png"/>
+    </div>
+  </div>
+</section>

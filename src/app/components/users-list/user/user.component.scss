@@ -1,0 +1,39 @@
+@import "../../../../assets/styles/variables";
+
+.user-card {
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 20px;
+  border-bottom: 5px solid $blue;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: ease-in .3s;
+    &:hover {
+      //transform: scale(1.1);
+    }
+  }
+
+  p {
+    margin: 8px 0 0;
+    padding-left: 10px;
+    @include text-mixin(#000, 1vw, $font-gotham-pro-regular);
+    span {
+      font-size: 1vw;
+    }
+  }
+
+  &__name {
+    margin: 15px 0 0;
+    font-size: 1.2vw;
+  }
+
+  a {
+    margin: 15px 0 0;
+    display: block;
+    padding-left: 10px;
+    @include text-mixin(#000, 0.8vw, $font-gotham-pro-regular);
+  }
+}

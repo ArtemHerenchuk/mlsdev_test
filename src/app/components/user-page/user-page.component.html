@@ -1,3 +1,22 @@
-<p>
-  user-page works!
-</p>
+<section class="user-page" *ngIf="profile && profile.user">
+  <div class="wrap">
+    <div class="user-page__card">
+      <div class="user-page__card-user-info">
+        <img class="user-page__card-user-info-img" src="{{profile.user.avatar_url}}" alt="{{profile.user.login}}">
+      </div>
+      <div class="user-page__repos">
+        <p class="user-card__name"><span>Пользователь:</span> {{profile.user.login | displayUserData: 'Логин:'}}</p>
+        <p class="user-card__name">
+          <span>E-mail:</span> {{profile.user.email | displayUserData: ''}}</p>
+        <p class="user-card__name">
+          <span>Имя:</span> {{profile.user.name | displayUserData: 'Имя:'}}</p>
+        <h3>Список репозиториев:</h3>
+        <ul *ngIf="profile.repositories && profile.repositories.length">
+          <li *ngFor="let repo of profile.repositories">
+            <a [routerLink]="'/repo/' + repo.owner + '/' + repo.name">{{repo.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

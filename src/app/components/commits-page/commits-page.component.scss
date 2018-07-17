@@ -1,0 +1,13 @@
+@import '../repo-page/repo-page.component';
+
+.repo-page.commit-page {
+  .repo-page__card {
+    ul {
+      li {
+        &:before {
+          background-image: url('/assets/images/commit.png');
+        }
+      }
+    }
+  }
+}

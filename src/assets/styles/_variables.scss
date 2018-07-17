@@ -1,0 +1,47 @@
+//fonts
+$font-gotham-pro-regular: 'GothamProRegular';
+$font-gotham-pro-bold: 'GothamProBold';
+$font-gotham-pro-black: 'GothamProBlack';
+$font-gotham-pro-italic: 'GothamProItalic';
+$font-gotham-pro-medium: 'GothamProMedium';
+$font-gotham-pro-light: 'GothamProLight';
+$font-gotham-pro-medium-italic: 'GothamProMediumItalic';
+$font-gotham-pro-light-italic: 'GothamProLightItalic';
+$font-gotham-pro-bold-italic: 'GothamProBoldItalic';
+$font-gotham-pro-black-italic: 'GothamProBlackItalic';
+
+//colors
+$blue: rgb(36, 41, 46);
+
+//mixins
+@mixin text-mixin($color, $font-size, $font-family) {
+  color: $color;
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+body {
+  background-color: rgba(36, 41, 46, 0.8);
+  margin: 0;
+}
+
+.wrap {
+  width: 90%;
+  //max-width: 1200px;
+  margin: auto;
+}
+
+.pagination-controls {
+  margin: auto;
+  ul {
+    padding: 0;
+    li {
+      span, a {
+        font-family: $font-gotham-pro-regular;
+      }
+    }
+    li.current {
+      background-color: $blue;
+    }
+  }
+}

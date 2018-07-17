@@ -1,3 +1,10 @@
-<p>
-  users-list works!
-</p>
+<section class="user-list">
+  <div class="wrap">
+    <ul class="user-list__list" *ngIf="users && users.length">
+      <li class="user-list__list-item" *ngFor="let user of users">
+        <app-user [user]="user"></app-user>
+      </li>
+    </ul>
+    <a *ngIf="_isDisplayShowMoreButton" class="user-list__show-more" (click)="getUsers()">Показать еще</a>
+  </div>
+</section>

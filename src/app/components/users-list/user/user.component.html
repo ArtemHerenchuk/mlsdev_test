@@ -1,3 +1,6 @@
-<p>
-  user works!
-</p>
+<div class="user-card">
+  <img class="user-card__img" src="{{user.avatar_url}}" alt="{{user.login}}" [routerLink]="'user/' + user.login"/>
+  <p class="user-card__name">{{user.login | displayUserData: 'Логин:' }}</p>
+  <p class="user-card__email">{{user.email | displayUserData: 'Email:' }}</p>
+  <a class="user-card__link" [routerLink]="'user/' + user.login">Посмотреть профиль</a>
+</div>

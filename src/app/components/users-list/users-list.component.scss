@@ -1,0 +1,33 @@
+@import "../../../assets/styles/variables";
+
+.user-list {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 50px auto;
+    &-item {
+      width: 19%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__show-more {
+    width: 300px;
+    margin: 15px auto 135px;
+    background-color: #fff;
+    height: 50px;
+    @include text-mixin($blue, 1.8vw, $font-gotham-pro-regular);
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    display: block;
+    transition: ease-in .3s;
+    &:hover {
+      color: #fff;
+      background-color: $blue;
+    }
+  }
+}

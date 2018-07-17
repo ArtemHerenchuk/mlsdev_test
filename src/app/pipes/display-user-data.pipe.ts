@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'checkUserDataForErrors'
+  name: 'displayUserData'
 })
-export class CheckUserDataPipe implements PipeTransform {
+export class DisplayUserDataPipe implements PipeTransform {
   errMsg = ' не указан';
 
   transform(value: string, target: string): string {
