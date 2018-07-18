@@ -15,7 +15,6 @@ export class GithubApiService {
   getUsers(since: number, per_page: number): Observable<GithubApp.Profiles.ShortProfile[]> {
     return new Observable<GithubApp.Profiles.ShortProfile[]>(observer => {
       this._http.get(API_URL + 'users?since=' + since + '&per_page=' + per_page).subscribe((users) => {
-        console.log(users.json());
         return observer.next(
           users.json().map((u) => {
             return {

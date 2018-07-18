@@ -3,7 +3,10 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": []
+    "baseUrl": "./",
+    "types": [
+      "firebase"
+    ]
   },
   "exclude": [
     "src/test.ts",
